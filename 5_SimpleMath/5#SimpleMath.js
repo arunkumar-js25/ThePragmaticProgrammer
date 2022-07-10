@@ -27,6 +27,22 @@ Challenges
 
 const prompt = require("prompt-sync")();
 
+function addTwoNumbers(firstNumber, secondNumber) {
+    return(firstNumber + secondNumber );
+}
+
+function subTwoNumbers(firstNumber, secondNumber) {
+    return(firstNumber - secondNumber );
+}
+
+function multiplytwoNumbers(firstNumber, secondNumber) {
+    return(firstNumber * secondNumber );
+}
+
+function dividetwoNumbers(firstNumber, secondNumber) {
+    return(firstNumber / secondNumber );
+}
+
 proceedCalc = true;
 let num1 = prompt("What is the first number?");
 if(! /^\d+$/.test(num1))  //Regex to find only digits presents in input. test() function to check
@@ -62,18 +78,17 @@ if(proceedCalc)
     num2= parseInt(num2) ;
 
     //add
-    let addnum = num1 + num2;
-    console.log(num1 + " + " + num2 + " = " + addnum);
+    console.log(num1 + " + " + num2 + " = " + addTwoNumbers(num1,num2));
 
     //substract
     let subnum = num1 - num2;
-    console.log(num1 + " - " + num2 + " = " + subnum);
+    console.log(num1 + " - " + num2 + " = " + subTwoNumbers(num1,num2));
 
     //multiply 
     let mulnum = num1 * num2;
-    console.log(num1 + " * " + num2 + " = " + mulnum);
+    console.log(num1 + " * " + num2 + " = " + multiplytwoNumbers(num1,num2));
 
     //divide
     let divnum = num1/num2;
-    console.log(num1 + " / " + num2 + " = " + divnum);
+    console.log(num1 + " / " + num2 + " = " + dividetwoNumbers(num1,num2));
 }
