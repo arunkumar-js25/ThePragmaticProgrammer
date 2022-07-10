@@ -7,6 +7,12 @@
 $(document).ready(function(){  
     $( "#inputStr" ).keyup(function () {    
         let inputValue = document.getElementById("inputStr").value;
-        document.getElementById("para").innerHTML= inputValue + " has " + String(inputValue.length) + " characters.";  
+        if(inputValue.length>0)
+        {
+            document.getElementById("para").innerHTML= inputValue + " has " + String(inputValue.length) + " characters.";  
+        }
+        else{
+            document.getElementById("para").innerHTML="";
+        }
     }); 
 });
